@@ -10,7 +10,7 @@ def network_alert_stub(celcius):
     else:
         return 500
 
-def alert_in_celcius(farenheit):
+def alert_in_celcius(farenheit,test):
     celcius = (farenheit - 32) * 5 / 9
     returnCode = network_alert_stub(celcius)
     if returnCode != 200:
@@ -21,10 +21,12 @@ def alert_in_celcius(farenheit):
         global alert_failure_count
         alert_failure_count += 1
         print("Increased alert count")
+        if test:
+            assert(alert_failure_count==0)
 
 
-alert_in_celcius(400.5)
-alert_in_celcius(303.6)
+alert_in_celcius(400.5,True)
+alert_in_celcius(303.6,True)
 print(f'{alert_failure_count} alerts failed.')
-assert(alert_failure_count==0)
+
 print('All is well (maybe!)')
