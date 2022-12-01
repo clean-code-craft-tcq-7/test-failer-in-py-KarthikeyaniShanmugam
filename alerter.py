@@ -25,8 +25,11 @@ def alert_in_celcius(farenheit,test):
             assert(alert_failure_count==0)
 
 
-alert_in_celcius(400.5,True)
-alert_in_celcius(303.6,True)
+
+alert_in_celcius(303.6,True)  # Celcius threshold : 392   < threshold :  alert False
+alert_in_celcius(392,True)    # Celcius threshold : 392   = threshold :  alert False 
+alert_in_celcius(400.5,True)  # Celcius threshold : 392   > threshold : alert True
+
 print(f'{alert_failure_count} alerts failed.')
 
 print('All is well (maybe!)')
