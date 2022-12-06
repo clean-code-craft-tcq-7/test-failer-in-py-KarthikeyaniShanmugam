@@ -20,7 +20,7 @@ def alert_in_celcius(farenheit):
         # However, this code doesn't count failures!
         # Add a test below to catch this bug. Alter the stub above, if needed.
         global alert_failure_count
-        alert_failure_count += 0
+        alert_failure_count += 1
 
 if test_env:
     alert_in_celcius(303.6)  # Celcius threshold : 392   < threshold :  alert False
