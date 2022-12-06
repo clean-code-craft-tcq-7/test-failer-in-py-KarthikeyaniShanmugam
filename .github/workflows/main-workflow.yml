@@ -40,8 +40,8 @@ jobs:
     - name: tshirts pass
       run: python tshirts.py
     
-    - name: misaligned fail
+    - name: misaligned pass
       run: python misaligned.py
 
-    - name: alerter fail
+    - name: alerter pass
       run: python alerter.py
