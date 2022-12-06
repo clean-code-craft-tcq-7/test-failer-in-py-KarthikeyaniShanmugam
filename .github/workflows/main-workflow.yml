@@ -45,3 +45,6 @@ jobs:
 
     - name: alerter pass
       run: python alerter.py
+
+    - name: alerter test pass
+      run: python alerter_tester.py
